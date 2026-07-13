@@ -1,0 +1,77 @@
+@Metadata.layer: #CORE
+annotate view ZC_VEHICLE_SERVICE with
+{
+
+  @UI.facet: [
+    {
+      id: 'GeneralInformation',
+      type: #IDENTIFICATION_REFERENCE,
+      purpose: #STANDARD,
+      label: 'Vehicle Service Details',
+      position: 10
+    },
+    {
+      id: 'ServiceParts',
+      type: #LINEITEM_REFERENCE,
+      purpose: #STANDARD,
+      label: 'Service Parts',
+      position: 20,
+      targetElement: '_Part'
+    }
+  ]
+
+  @UI.identification: [{ position: 10, label: 'Service ID' }]
+  @UI.lineItem: [{ position: 10, label: 'Service ID' }]
+  @UI.selectionField: [{ position: 10 }]
+  ServiceId;
+
+  @UI.identification: [{ position: 20, label: 'Customer Name' }]
+  @UI.lineItem: [{ position: 20, label: 'Customer Name' }]
+  @UI.selectionField: [{ position: 20 }]
+  CustomerName;
+
+  @UI.identification: [{ position: 30, label: 'Mobile Number' }]
+  @UI.lineItem: [{ position: 30, label: 'Mobile Number' }]
+  MobileNo;
+
+  @UI.identification: [{ position: 40, label: 'Vehicle Number' }]
+  @UI.lineItem: [{ position: 40, label: 'Vehicle Number' }]
+  VehicleNo;
+
+  @UI.identification: [{ position: 50, label: 'Brand' }]
+  @UI.lineItem: [{ position: 50, label: 'Brand' }]
+  Brand;
+
+  @UI.identification: [{ position: 60, label: 'Model' }]
+  @UI.lineItem: [{ position: 60, label: 'Model' }]
+  Model;
+
+  @UI.identification: [{ position: 70, label: 'Service Date' }]
+  @UI.lineItem: [{ position: 70, label: 'Service Date' }]
+  ServiceDate;
+
+  @UI.identification: [{ position: 80, label: 'Status' }]
+  @UI.lineItem: [{ position: 80, label: 'Status' }]
+  Status;
+
+  @UI.identification: [{ position: 90, label: 'Currency' }]
+  @UI.lineItem: [{ position: 90, label: 'Currency' }]
+  CukyField;
+
+  @UI.identification: [{ position: 100, label: 'Labour Charge' }]
+  @UI.lineItem: [{ position: 100, label: 'Labour Charge' }]
+  LaborCharge;
+
+  @UI.identification: [{ position: 110, label: 'Parts Charge' }]
+  @UI.lineItem: [{ position: 110, label: 'Parts Charge' }]
+  PartsCharge;
+
+  @UI.identification: [{ position: 120, label: 'GST' }]
+  @UI.lineItem: [{ position: 120, label: 'GST' }]
+  Gst;
+
+  @UI.identification: [{ position: 130, label: 'Total Amount' }]
+  @UI.lineItem: [{ position: 130, label: 'Total Amount' }]
+  TotalAmount;
+
+}

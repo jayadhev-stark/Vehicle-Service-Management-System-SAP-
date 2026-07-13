@@ -1,0 +1,65 @@
+managed implementation in class zbp_i_vehicle_service_ unique;
+strict ( 2 );
+
+define behavior for ZI_VEHICLE_SERVICE_
+persistent table zvehicle_servic
+lock master
+authorization master ( instance )
+{
+
+  create;
+  update;
+  delete;
+
+  field ( readonly : update ) ServiceId;
+
+  determination GenerateServiceId on modify { create; }
+
+  association _Part { create; }
+
+  mapping for zvehicle_servic
+  {
+    ServiceId      = service_id;
+    CustomerName   = customer_name;
+    MobileNo       = mobile_no;
+    VehicleNo      = vehicle_no;
+    Brand          = brand;
+    Model          = model;
+    ServiceDate    = service_date;
+    Status         = status;
+    CukyField      = cuky_field;
+    LaborCharge    = labor_charge;
+    PartsCharge    = parts_charge;
+    Gst            = gst;
+    TotalAmount    = total_amount;
+  }
+
+}
+
+define behavior for ZI_SERVICE_PARTS
+persistent table zservice_parts
+lock dependent by _Part
+authorization dependent by _Part
+{
+
+  update;
+  delete;
+
+  field ( readonly : update )
+    ServiceId,
+    ItemNo;
+
+  association _Part;
+
+  mapping for zservice_parts
+  {
+    ServiceId   = service_id;
+    ItemNo      = item_no;
+    PartName    = part_name;
+    Quantity    = quantity;
+    CukyField   = cuky_field;
+    UnitPrice   = unit_price;
+    TotalPrice  = total_price;
+  }
+
+}

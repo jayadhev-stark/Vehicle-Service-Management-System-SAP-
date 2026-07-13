@@ -1,0 +1,39 @@
+@Metadata.layer: #CORE
+annotate view ZC_SERVICE_PARTS with 
+{
+
+  @UI.facet: [
+    {
+      id: 'PartsDetails',
+      type: #IDENTIFICATION_REFERENCE,
+      purpose: #STANDARD,
+      label: 'Service Parts Details',
+      position: 10
+    }
+  ]
+
+  @UI.identification: [{ position: 10, label: 'Item Number' }]
+  @UI.lineItem: [{ position: 10, label: 'Item Number' }]
+  ItemNo;
+
+  @UI.identification: [{ position: 20, label: 'Part Name' }]
+  @UI.lineItem: [{ position: 20, label: 'Part Name' }]
+  PartName;
+
+  @UI.identification: [{ position: 30, label: 'Quantity' }]
+  @UI.lineItem: [{ position: 30, label: 'Quantity' }]
+  Quantity;
+
+  @UI.identification: [{ position: 40, label: 'Currency' }]
+  @UI.lineItem: [{ position: 40, label: 'Currency' }]
+  CukyField;
+
+  @UI.identification: [{ position: 50, label: 'Unit Price' }]
+  @UI.lineItem: [{ position: 50, label: 'Unit Price' }]
+  UnitPrice;
+
+  @UI.identification: [{ position: 60, label: 'Total Price' }]
+  @UI.lineItem: [{ position: 60, label: 'Total Price' }]
+  TotalPrice;
+
+}

@@ -1,0 +1,5 @@
+@EndUserText.label: 'service definition'
+define service Zsd_vehicle_service_ {
+  expose ZC_VEHICLE_SERVICE;
+  expose ZC_SERVICE_PARTS;
+}
